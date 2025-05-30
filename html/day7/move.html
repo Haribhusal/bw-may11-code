@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving SVG Person</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        #person {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SVG Stick Person -->
+    <svg id="person" viewBox="0 0 100 200">
+        <!-- Head -->
+        <circle cx="50" cy="20" r="15" fill="black" />
+        <!-- Body -->
+        <line x1="50" y1="35" x2="50" y2="100" stroke="black" stroke-width="5" />
+        <!-- Arms -->
+        <line x1="20" y1="60" x2="80" y2="60" stroke="black" stroke-width="5" />
+        <!-- Legs -->
+        <line x1="50" y1="100" x2="30" y2="150" stroke="black" stroke-width="5" />
+        <line x1="50" y1="100" x2="70" y2="150" stroke="black" stroke-width="5" />
+    </svg>
+
+    <script>
+        const person = document.getElementById("person");
+        let pos = 0;
+        let direction = 1;
+
+        function move() {
+            pos += direction;
+            if (pos > window.innerWidth - 100 || pos < 0) {
+                direction *= -1; // Change direction at screen edges
+                person.style.transform = `scaleX(${direction})`; // Flip horizontally
+            }
+            person.style.left = pos + "px";
+            requestAnimationFrame(move);
+        }
+
+        move(); // Start moving
+    </script>
+
+</body>
+
+</html>

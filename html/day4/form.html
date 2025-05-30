@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <!-- Block Element -->
+
+
+    <form>
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" placeholder="Enter your name" required />
+        <hr />
+        <label for="emailInput">Full Name</label>
+
+        <!-- Inline Element -->
+        <input type="email" id="emailInput" placeholder="Enter Email" value="info@sth.com" readonly>
+
+        <hr />
+        <label for="pwd">Password</label>
+        <input type="password" placeholder="Password" id="pwd">
+        <hr />
+        <label for="age">Age</label>
+
+        <input id="age" type="number" placeholder="age">
+        <hr />
+        <input type="radio" name="genderSelection" id="mselect" placeholder="age"> <label for="mselect">Male</label>
+        <input type="radio" name="genderSelection" id="fselect" placeholder="age"> <label for="fselect">Female</label>
+        <input type="radio" name="genderSelection" id="oselect" placeholder="age"> <label for="oselect">Others</label>
+        <hr />
+
+        <input type="checkbox" id="cricket" name="gameselection"> <label for="cricket">Cricket</label>
+        <input type="checkbox" id="football" name="gameselection"> <label for="football">Football</label>
+        <input type="checkbox" id="basketball" name="gameselection"> <label for="basketball">Basketball</label>
+        <hr />
+        <label for="sectionSelect">Select your section</label>
+
+        <select id="sectionSelect" name="section">
+            <option value="" disabled selected>Select Section</option>
+            <option value="a">Section A</option>
+            <option value="b">Section B</option>
+            <option value="c">Section C</option>
+            <option value="d">Section D</option>
+            <option value="e">Section E</option>
+            <option value="f">Section F</option>
+            <option value="g">Section G</option>
+            <option value="h">Section H</option>
+        </select>
+        <hr />
+
+        <input type="file" accept="image/*">
+
+        <hr />
+        <input type="hidden" name="medium" value="fromwebite">
+        <hr />
+
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+header
+-logo
+    - Logo image
+    - Logo Text
+-navbar
+    - link 1
+    - link 2
+    - link 3
+-buttons
+    - login
+    - register
+    
+
+section
+    - left side
+    - middle side
+    - right side
+
+
+section 
+    - title
+    - articles
+        - each articles
+            - image
+            -heading
+            -text
+            
+footer
+    - brand
+        - logo
+        -location
+        - email/number
+        - social media icons with link
+    - useful links
+        -link 1
+        -link 2
+    - Newsletter form
+        - email input
+        - submit buttons
+buttom 
+    - copyright 
+    - links 
+        - faq, terms and conditions

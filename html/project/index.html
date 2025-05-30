@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1220px;
+            /* padding: 0 7%; */
+            /* background-color: red; */
+            margin: auto;
+            display: flex;
+        }
+
+        header .container {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .news-section .container {
+            padding: 30px;
+            background-color: gainsboro;
+            flex-direction: column;
+
+        }
+
+        .news-section .allnews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+        }
+
+        footer a {
+            color: #a1a1a1;
+
+        }
+
+        footer .container {
+            justify-content: space-between;
+        }
+
+        footer .links ul {
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header style="background-color: cornflowerblue;">
+        <div class="container">
+            <div class="brand">
+                <img src="https://picsum.photos/id/13/100/100" alt="">
+                <h2>ABC News</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="buttons">
+                <button>Login</button>
+                <button>Register</button>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="left">
+                <h2>Left</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod vero eius! Eius, tempore praesentium.
+                Velit, laudantium quidem deleniti itaque eos hic consequatur architecto vel temporibus omnis quis, ipsum
+                incidunt?
+            </div>
+            <div class="center">
+                <h2>Center</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod vero eius! Eius, tempore praesentium.
+                Velit, laudantium quidem deleniti itaque eos hic consequatur architecto vel temporibus omnis quis, ipsum
+                incidunt?
+            </div>
+            <div class="right">
+                <h2>Right</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod vero eius! Eius, tempore praesentium.
+                Velit, laudantium quidem deleniti itaque eos hic consequatur architecto vel temporibus omnis quis, ipsum
+                incidunt?
+            </div>
+        </div>
+
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <h3>Latest News</h3>
+            <div class="allnews">
+                <div class="news-card">
+                    <img src="https://picsum.photos/id/32/400/300" alt="">
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio officia laborum modi
+                        dolorem iste ullam vitae alias quod eos consectetur inventore nesciunt porro dolores odio,
+                        voluptatum rem numquam doloremque?
+                    </p>
+                </div>
+                <div class="news-card">
+                    <img src="https://picsum.photos/id/32/400/300" alt="">
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio officia laborum modi
+                        dolorem iste ullam vitae alias quod eos consectetur inventore nesciunt porro dolores odio,
+                        voluptatum rem numquam doloremque?
+                    </p>
+                </div>
+                <div class="news-card">
+                    <img src="https://picsum.photos/id/32/400/300" alt="">
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio officia laborum modi
+                        dolorem iste ullam vitae alias quod eos consectetur inventore nesciunt porro dolores odio,
+                        voluptatum rem numquam doloremque?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="brand">
+                <img src="https://picsum.photos/id/13/100/100" alt="">
+                <ul>
+                    <li>
+                        <p>Kathmandu, Nepal</p>
+                    </li>
+                    <li>
+                        <p>info@sasa.com</p>
+                    </li>
+                    <li>
+                        <p>
+                            +977-98XXXXXXXX
+                        </p>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Linkedin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="center">
+                <div class="sub-heading">
+                    <strong>
+                        Useful Links
+                    </strong>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="right">
+                <form action="">
+                    <input type="text" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025, ABC News
+            </div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#">FAQ's</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
