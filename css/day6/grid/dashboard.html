@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            min-height: 100vh;
+        }
+
+        aside {
+            grid-row-start: 1;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: black;
+        }
+
+        header {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 3;
+            grid-column-end: 11;
+            background-color: green;
+        }
+
+        main {
+            grid-row-start: 2;
+            grid-row-end: 9;
+            grid-column-start: 3;
+            grid-column-end: 11;
+            background-color: wheat;
+        }
+
+        footer {
+            grid-row-start: 9;
+            grid-row-end: 11;
+            grid-column-start: 3;
+            grid-column-end: 11;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse aspernatur omnis quo quibusdam ut earum ea
+        nostrum consequatur a quos laudantium architecto vero quas quis magnam, modi quod nisi iusto!
+    </header>
+    <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia quo, consequuntur saepe earum nobis vel
+        odit ad expedita, omnis quasi necessitatibus aut corrupti quae maxime! Praesentium modi vel minima.</aside>
+    <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellendus, nam hic aut consequatur
+        repudiandae error veritatis enim facilis rerum perferendis esse reprehenderit, dolore optio culpa. Sequi autem
+        ratione iste.</main>
+    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed unde quis, nobis iure nesciunt aperiam fugiat
+        ducimus labore laudantium obcaecati nam tenetur itaque ad sunt ipsum quo repudiandae consequuntur maxime?
+    </footer>
+</body>
+
+</html>

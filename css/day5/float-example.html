@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float Examples</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid #333;
+            padding: 20px;
+            overflow: hidden;
+            /* Clear the float */
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .float-left {
+            float: left;
+            background-color: #3498db;
+        }
+
+        .float-right {
+            float: right;
+            background-color: #e74c3c;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .text-content {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Float Left Example</h2>
+        <div class="box float-left">Float Left</div>
+        <div class="text-content">
+            text This text wraps around the floated element on the left. The element with float: left is positioned to
+            the
+            left of its container, and other content flows around it on the right side.
+        </div>
+        <hr />
+        <div class="clear"></div>
+
+        <h2>Float Right Example</h2>
+        <div class="box float-right">Float Right</div>
+        <div class="text-content">
+            This text wraps around the floated element on the right. The element with float: right is positioned to the
+            right of its container, and other content flows around it on the left side.
+        </div>
+
+        <div class="clear"></div>
+
+        <h2>Multiple Float Example</h2>
+        <div class="box float-left">Float Left</div>
+        <div class="box float-right">Float Right</div>
+        <div class="text-content">
+            This example shows multiple floated elements. The left element floats to the left, and the right element
+            floats to the right. The text content flows between them.
+        </div>
+    </div>
+</body>
+
+</html>
