@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        header .container {
+            display: flex;
+            max-width: 1200px;
+            justify-content: space-between;
+            margin: 0 auto;
+            gap: 15px;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header .buttons {
+            display: flex;
+
+        }
+
+        .news-section .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+        }
+
+        .news-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-section figure img {
+            width: 100%;
+        }
+
+        .news-section .news article {
+            background-color: white;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .news-section .news {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15px;
+            }
+
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            .news-section .news {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+        }
+
+        @media screen and (max-width: 520px) {
+            header .menu-links {
+                display: none;
+            }
+
+        }
+
+        @media screen and (min-width: 520px) {
+            header .toggler {
+                display: none;
+            }
+
+        }
+
+        @media screen and (orientation: portrait) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media print {
+            header {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                Logo
+            </div>
+            <nav>
+
+                <div class="toggler">
+                    <button>
+                        Show Menu
+                    </button>
+                </div>
+
+
+                <div class="menu-links">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 1</a>
+                </div>
+
+            </nav>
+
+            <div class="buttons">
+                <button>Login</button>
+                <button>Register</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="news-section">
+        <div class="container">
+            <h2>Recent News</h2>
+            <div class="news">
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="https://picsum.photos/id/45/300/300" alt="">
+                    </figure>
+                    <div class="info">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente, voluptate
+                            provident asperiores adipisci enim praesentium quaerat commodi, rerum suscipit ratione?
+                            Reiciendis odit qui id consequatur est recusandae deserunt officiis?
+                        </p>
+                        <a href="#">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

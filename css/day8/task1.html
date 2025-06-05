@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        button .later {
+            /* display: none; */
+            position: absolute;
+            width: 70px;
+            /* background-color: red; */
+            top: 0;
+            left: calc(100% - 15px);
+            visibility: hidden;
+            /* display: none; */
+
+        }
+
+        @keyframes slideRight {
+            to {
+                left: 100%;
+                visibility: visible;
+            }
+        }
+
+        button:hover .later {
+            animation: slideRight 0.5s ease;
+            animation-fill-mode: forwards;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>
+        <span class="initial">
+            Get a call
+        </span>
+        <span class="later">Free Call</span>
+    </button>
+
+
+
+
+</body>
+
+</html>

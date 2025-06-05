@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .users img {
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 5px solid white;
+        }
+
+        .users {
+            position: relative;
+        }
+
+        .users img:nth-child(1) {
+            z-index: 5;
+            /* left: 10px; */
+
+            /* height: 200px; */
+        }
+
+        .users img:nth-child(2) {
+            z-index: 4;
+
+            left: 50px;
+
+            /* height: 200px; */
+        }
+
+        .users img:nth-child(3) {
+            z-index: 3;
+
+            left: 100px;
+
+            /* height: 200px; */
+        }
+
+        .users img:nth-child(4) {
+            left: 150px;
+            z-index: 2;
+
+
+            /* height: 200px; */
+        }
+
+        .users img:nth-child(5) {
+            z-index: 1;
+
+            left: 200px;
+
+            /* height: 200px; */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aspernatur est sed debitis tenetur et, facere
+    asperiores. Corrupti accusantium esse voluptates tempore unde deserunt! Assumenda architecto totam eveniet
+    perferendis repudiandae?
+
+
+    <div class="users">
+        <img src="https://picsum.photos/id/2/100/100" alt="">
+        <img src="https://picsum.photos/id/13/100/100" alt="">
+        <img src="https://picsum.photos/id/24/100/100" alt="">
+        <img src="https://picsum.photos/id/35/100/100" alt="">
+        <img src="https://picsum.photos/id/46/100/100" alt="">
+    </div>
+</body>
+
+</html>
