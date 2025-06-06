@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1000px;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            perspective: 2000px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            animation: rotateCube 5s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cube .face img {
+            width: 100%;
+        }
+
+        /* Positioning each face */
+        .front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="cube">
+            <div class="face front">
+                <img src="https://picsum.photos/id/13/400/400" alt="">
+            </div>
+            <div class="face back">
+                <img src="https://picsum.photos/id/14/400/400" alt="">
+
+            </div>
+            <div class="face right">
+                <img src="https://picsum.photos/id/15/400/400" alt="">
+
+            </div>
+            <div class="face left">
+                <img src="https://picsum.photos/id/16/400/400" alt="">
+
+            </div>
+            <div class="face top">
+                <img src="https://picsum.photos/id/17/400/400" alt="">
+
+            </div>
+            <div class="face bottom">
+                <img src="https://picsum.photos/id/18/400/400" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

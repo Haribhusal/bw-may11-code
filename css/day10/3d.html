@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            perspective: 200px;
+            /* Distance from viewer */
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: lightcoral;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transform: rotateY(45deg);
+            /* Rotate along Y axis */
+            transform-style: preserve-3d;
+            /* Keep 3D children in perspective */
+            transition: transform 1s;
+        }
+
+        .box:hover {
+            transform: rotateY(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="box">3D Box</div>
+    </div>
+
+
+</body>
+
+</html>
