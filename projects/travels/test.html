@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .hero-image-container {
+            width: 400px;
+            /* Adjust based on MongoDB's hero size */
+            height: 300px;
+            /* Adjust as needed */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures image fills the container */
+            clip-path: url(#hero-arc-clip);
+            /* Apply SVG clip path */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-image-container">
+        <img src="./image.svg" class="hero-image" alt="MongoDB hero image">
+    </div>
+
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="hero-arc-clip" clipPathUnits="objectBoundingBox">
+                <path d="M0,0.2 Q0.3,0 1,0.3 V1 H0 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+</body>
+
+</html>

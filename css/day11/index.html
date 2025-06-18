@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary_color: rgba(0, 200, 0);
+            --headingFontSize: 28px;
+        }
+
+        button {
+            background-color: var(--primary_color);
+        }
+
+        .heading {
+            color: var(--primary_color);
+            font-size: var(--headingFontSize);
+            position: relative;
+        }
+
+        .heading::after {
+            content: '';
+            height: 4px;
+            width: 30px;
+            background-color: var(--primary_color);
+            position: absolute;
+            top: 100%;
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <header>
+        <div class="container">
+            <div class="logo">
+
+                <h3 class="heading">
+                    <!-- before is here -->
+                    Logo
+                    <!-- After is here -->
+                </h3>
+
+            </div>
+            <nav>
+                <a href="#">Link 1</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 1</a>
+            </nav>
+            <div class="buttons">
+                <button>Login</button>
+                <button>Register</button>
+            </div>
+        </div>
+    </header>
+    <section class="about">
+        <div class="container">
+            <div class="heading">
+                <!-- here is before -->
+                <h3 class="title">About Us</h3>
+                <!-- here is after -->
+
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime quisquam, quod veritatis
+                laborum libero consequuntur non, porro magni rerum ut quasi obcaecati excepturi tempore atque
+                similique quam consequatur beatae.
+            </p>
+            <button>Read More</button>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="heading">
+                <h3 class="title">Our Services</h3>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime quisquam, quod veritatis
+                laborum libero consequuntur non, porro magni rerum ut quasi obcaecati excepturi tempore atque
+                similique quam consequatur beatae.
+            </p>
+            <button>Read More</button>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="heading">
+                <h3 class="title">Contact Us</h3>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime quisquam, quod veritatis
+                laborum libero consequuntur non, porro magni rerum ut quasi obcaecati excepturi tempore atque
+                similique quam consequatur beatae.
+            </p>
+            <button>Read More</button>
+        </div>
+    </section>
+</body>
+
+</html>

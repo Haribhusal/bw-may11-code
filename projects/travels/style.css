@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+.btn {
+    background-color: lime;
+    padding: 15px 35px;
+    border: 1px solid green;
+    border-radius: 6px;
+}
+
+.btn-bordered {
+    background-color: transparent;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-link {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    /* background-color: red; */
+    margin: 0 auto;
+}
+
+
+header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.565);
+}
+
+header .topbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .topbar {
+    background-color: #00684A;
+    color: white;
+    padding: 7px 0;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+header .topbar .badge {
+    font-size: 10px;
+    background-color: greenyellow;
+    color: black;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    padding: 3px 7px;
+}
+
+
+header .topbar a {
+    color: white;
+}
+
+header .announcement {
+    display: flex;
+    gap: 20px;
+}
+
+header .announcement:hover .action {
+    border-bottom: 1px solid white;
+}
+
+header .mainMenu {
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+}
+
+header .mainMenu .container {
+    justify-content: space-between;
+}
+
+
+header .logo img {
+    max-width: 140px;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .menu nav {
+    display: flex;
+    gap: 20px;
+}
+
+header .mainMenu .buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero {
+    padding: 30px 0;
+    position: relative;
+}
+
+
+.hero .container {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero .container .text {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero .text .subheading {
+    font-size: small;
+    text-transform: uppercase;
+    border-left: 2px solid greenyellow;
+    padding-left: 10px;
+}
+
+.hero .text .heading {
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.hero .freeDemo {
+    padding: 10px 25px;
+    background-color: rgba(128, 128, 128, 0.15);
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .15);
+}
+
+.hero .animation-part {
+    position: absolute;
+    left: 60%;
+    width: 100000px;
+    height: 400px;
+    background-color: black;
+    top: 0;
+    background-image: url('./image.svg');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: moveBg 500s ease infinite;
+}
+
+@keyframes moveBg {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+
+}

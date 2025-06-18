@@ -1,0 +1,60 @@
+header {
+  padding: 10px 30px;
+  background-color: white;
+}
+
+header .container {
+  max-width: 1220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+header .container nav a {
+  text-decoration: none;
+  color: orange;
+}
+
+header .container nav a:last-child {
+  background-color: red;
+  padding: 10px;
+}
+
+header .container nav a:hover {
+  background-color: orange;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header button {
+  padding: 20px 10px;
+  border-radius: 0;
+  border: 1px solid transparent;
+}
+
+.about button {
+  padding: 7px 3px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: orange;
+}
+/*# sourceMappingURL=style.css.map */

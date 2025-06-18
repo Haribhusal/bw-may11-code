@@ -1,0 +1,37 @@
+@import './partials/variables';
+@import './partials/header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin buttonStyles($paddingTop, $paddingLeft, $borderRadius) {
+    padding: $paddingLeft $paddingTop;
+    border-radius: $borderRadius;
+    border: 1px solid transparent;
+}
+
+
+// function addTwoNumbers(a, b) {
+//     return a+b;
+// }
+
+
+// button:hover {
+//     @include buttonStyles(20px, 30px, 0)
+// }
+
+
+
+header {
+    & button {
+        @include buttonStyles(10px, 20px, 0);
+    }
+}
+
+.about button {
+    @include buttonStyles(3px, 7px, 10px);
+    background-color: orange;
+}

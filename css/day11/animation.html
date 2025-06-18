@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            /* transition: 1000ms cubic-bezier(1, .25, 0, .88) transform; */
+            /* transition: 2000ms ease-in-out transform; */
+            transition: 0.5s ease all;
+            animation-name: myMoveAnimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+            /* animation-fill-mode: forwards; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes myMoveAnimation {
+            /* from {
+                transform: skewX(20deg);
+                background-color: orange;
+            }
+
+            to {
+                transform: translateX(300px) skewX(-20deg);
+                background-color: blue;
+            } */
+
+            0% {
+                background-color: red;
+                border-radius: 50%;
+            }
+
+            25% {
+                background-color: orange;
+                transform: translateX(300px) skewX(-20deg);
+                border-radius: 10%;
+            }
+
+            50% {
+                background-color: palegreen;
+                transform: translate(300px, 200px) skewX(-20deg);
+                border-radius: 70%;
+            }
+
+            75% {
+                background-color: palevioletred;
+                border-radius: 40%;
+                transform: translate(0, 200px) skewX(20deg);
+            }
+        }
+
+
+        .box:hover {
+
+            /* transform: rotate(60deg); */
+            /* transform: scale(2) rotate(60deg); */
+            /* transform: scale(0.5); */
+            /* transform: scaleX(-1); */
+            /* transform: translate(100px, 100px); */
+            /* transform: skewY(20deg); */
+            /* transform: matrix(1, 1.57, 0, 1, 100px, 30px); */
+            /* transform: matrix(1, 0.2, 0.3, 1, 50, 30); */
+            /* The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()). */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>

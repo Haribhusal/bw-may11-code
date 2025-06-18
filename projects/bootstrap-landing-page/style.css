@@ -1,0 +1,12 @@
+.custombutton {
+    background-color: #0097a7;
+    color: white;
+}
+
+.custombutton:hover {
+    background-color: red;
+}
+
+.customTitle {
+    color: white;
+}
