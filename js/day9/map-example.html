@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Field Submission with Map</title>
+</head>
+
+<body>
+    <h2>User Info Form (Duplicate Fields Allowed)</h2>
+    <form id="userForm">
+        <label>
+            Name: <input type="text" name="name" required />
+        </label><br /><br />
+
+        <label>
+            Email: <input type="email" name="email" />
+        </label><br /><br />
+
+        <label>
+            Email Again: <input type="email" name="email" />
+        </label><br /><br />
+
+        <label>
+            Age: <input type="number" name="age" />
+        </label><br /><br />
+
+        <label>
+            Age Again: <input type="number" name="age" />
+        </label><br /><br />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("userForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // prevent page reload
+
+            const inputs = form.querySelectorAll("input");
+            const userMap = new Map();
+
+            inputs.forEach((input) => {
+                const key = input.name;
+                const value = input.value.trim();
+                if (value !== "") {
+                    userMap.set(key, value); // last one with same key will overwrite previous
+                }
+            });
+
+            // Output final submission values
+            console.log("Final Submitted Data:");
+            userMap.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+
+            form.reset(); // optional: clear form
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Form Example</title>
+</head>
+
+<body>
+    <h2>User Info Form</h2>
+    <form id="userForm">
+        <label>
+            Name: <input type="text" name="name" required />
+        </label><br /><br />
+        <label>
+            Email: <input type="email" name="email" required />
+        </label><br /><br />
+        <label>
+            Age: <input type="number" name="age" required />
+        </label><br /><br />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("userForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // prevent form reload
+
+            const formData = new FormData(form);
+            const userMap = new Map();
+
+            // Iterate over each form field
+            formData.forEach((value, key) => {
+                userMap.set(key, value); // ensures key uniqueness
+            });
+
+            // Displaying in console
+            console.log("User Input:");
+            userMap.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+
+            // Optional: Clear form after submission
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
