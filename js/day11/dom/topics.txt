@@ -1,0 +1,4 @@
+Selecting Elements (querySelector, getElementById)
+Handling Events (click, input, keypress)
+Modifying HTML & CSS Dynamically
+Hands-on: Building a To-Do List App

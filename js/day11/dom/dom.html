@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="my-heading">hello</h1>
+    <input type="password" id="inputPassword" placeholder="Enter Password">
+    <button onclick="showPassword()">Reveal Password</button>
+    <button onclick="handleClick()">change text</button>
+    <button onclick="handleChangeDesign()">Change Design</button>
+    <header>
+
+        <a href="#">dasd</a>
+        <a href="#">ddasasd</a>
+
+    </header>
+    <main></main>
+
+    <script>
+
+        // 
+        // let inputP = document.getElementById('inputPassword')
+
+        // function showPassword() {
+        //     console.dir(inputP)
+        //     inputP.attributes[0].value = "text"
+        // }
+
+        // console.log(document)
+        let myHeading = document.getElementById('my-heading')
+        // console.dir(myHeading)
+
+        // function handleClick() {
+        //     // console.log("I am clicked")
+        //     myHeading.innerText = "Namaskar"
+        // }
+
+        function handleChangeDesign() {
+            myHeading.style.color = "red";
+            myHeading.style.backgroundColor = "yellow";
+            setTimeout(() => {
+                myHeading.style.backgroundColor = "green";
+
+            }, 3000)
+        }
+
+    </script>
+
+</body>
+
+</html>

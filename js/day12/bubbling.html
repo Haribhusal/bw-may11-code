@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="outer" style="padding: 30px; background-color: lightblue;">
+        Outer DIV
+        <p id="inner" style="padding: 20px; background-color: lightcoral;">
+            Inner Paragraph
+        </p>
+    </div>
+
+
+    <script>
+
+        const outer = document.getElementById("outer");
+        const inner = document.getElementById("inner");
+
+        // Event Bubbling (default: useCapture = false)
+        outer.addEventListener("click", () => {
+            console.log("Outer DIV clicked (bubbling)");
+        }, false); // or omit third parameter
+
+        inner.addEventListener("click", () => {
+            console.log("Inner P clicked (bubbling)");
+        }, false);
+
+        // Event Capturing (useCapture = true)
+        outer.addEventListener("click", () => {
+            console.log("Outer DIV clicked (capturing)");
+        }, true); // capturing phase
+
+        inner.addEventListener("click", () => {
+            console.log("Inner P clicked (capturing)");
+        }, true);
+
+    </script>
+</body>
+
+</html>

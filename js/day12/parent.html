@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            background-color: red;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <h1 id="heading">Hello</h1>
+        <button onclick="handleClick(this)">Click</button>
+    </div>
+    <script>
+
+        let title = document.getElementById('heading');
+
+        console.log(title)
+        console.log(title.firstChild.nodeValue)
+
+        // function handleClick(obj) {
+        //     // let parent = obj.parentNode;
+
+        //     // parent.style.backgroundColor = "green"
+        //     // let nameOfNode = parent.nodeName;
+        //     // console.log(nameOfNode)
+        // }
+    </script>
+</body>
+
+</html>

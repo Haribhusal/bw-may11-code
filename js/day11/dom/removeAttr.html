@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="wrapper" class="wrapper">
+
+        <a href="https://google.com" id="link">Go to Google</a>
+        <button id="remover">remove link</button>
+
+    </div>
+
+    <script>
+        let wrapper = document.getElementById('wrapper')
+        let remover = document.getElementById('remover')
+        let link = document.getElementById('link');
+
+        let btn = document.createElement('button')
+        btn.innerText = "I am added from js"
+
+        remover.addEventListener("click", function () {
+            // link.remove();
+
+            wrapper.appendChild(btn)
+
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

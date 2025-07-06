@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1 id="myHeading">This is heading</h1>
+    <h1 id="myHeading2">This is heading</h1>
+    <h1 id="myHeading3">This is heading</h1>
+    <nav>This is nav</nav>
+    <nav>This is nav</nav>
+    <nav>This is nav</nav>
+    <nav>This is nav</nav>
+    <nav>This is nav</nav>
+
+    <header>
+        <div class="logo">
+            <!-- This is where we call innerHTML -->
+            <!-- This is where we call inner Text -->
+        </div>
+    </header>
+    <script>
+        // console.log(document)
+
+        let heading = document.getElementById('myHeading');
+        let headings = document.querySelectorAll('h1');
+        let myNav = document.getElementsByTagName('nav');
+        let logo = document.querySelector('header .logo')
+        logo.innerHTML = '<h1>This is changed logo with h1 tag</h1>'
+        console.log(logo)
+        // console.log(headings)
+        // for (let head of headings) {
+        //     head.innerHTML = "This is changed heading"
+        //     // console.log(head)
+        // }
+    </script>
+
+</body>
+
+</html>
