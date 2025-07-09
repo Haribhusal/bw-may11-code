@@ -10,9 +10,9 @@
 <body>
 
 
-    <h1 id="myHeading">This is heading</h1>
-    <h1 id="myHeading2">This is heading</h1>
-    <h1 id="myHeading3">This is heading</h1>
+    <h1 id="myHeading">This is headingwqe</h1>
+    <h1 id="myHeading2">This is headingeqwe</h1>
+    <h1 id="myHeading3">This is headingeqweq</h1>
     <nav>This is nav</nav>
     <nav>This is nav</nav>
     <nav>This is nav</nav>
@@ -33,12 +33,13 @@
         let myNav = document.getElementsByTagName('nav');
         let logo = document.querySelector('header .logo')
         logo.innerHTML = '<h1>This is changed logo with h1 tag</h1>'
+        logo.innerText = 'LOGOG'
         console.log(logo)
         // console.log(headings)
-        // for (let head of headings) {
-        //     head.innerHTML = "This is changed heading"
-        //     // console.log(head)
-        // }
+        for (let head of headings) {
+            head.innerHTML = "This is changed heading"
+            // console.log(head)
+        }
     </script>
 
 </body>
