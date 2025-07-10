@@ -82,10 +82,14 @@
         function editTask(index) {
             let newValue = prompt('Enter New Value', tasks[index])
             console.log(newValue)
-            tasks[index] = newValue;
-            localStorage.setItem('tasks', JSON.stringify(tasks));
-            renderTasksIntoList();
-            console.log("editing", index)
+            if (newValue.trim()) {
+                if (tasks[index] !== newValue) {
+                    tasks[index] = newValue;
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                    renderTasksIntoList();
+                    console.log("editing", index)
+                }
+            }
         }
 
         renderTasksIntoList();
