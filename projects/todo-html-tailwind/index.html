@@ -14,49 +14,82 @@
 
     <div class="content p-10 bg-white max-w-md w-full rounded-md">
         <div class="heading text-3xl font-bold">My Task Management</div>
-        <form action="" class="my-5 bg-blue-200 rounded-md flex p-2 gap-2">
-            <input type="text" placeholder="Enter Task"
+        <form id="taskForm" action="" class="my-5 bg-blue-200 rounded-md flex p-2 gap-2">
+            <input type="text" id="userInput" placeholder="Enter Task"
                 class="flex-1 outline-none bg-white rounded-md focus:border-blue-500 px-3">
             <button type="submit" class="bg-blue-500 rounded-md text-white px-3 py-2"><i
                     class="fa-solid fa-plus"></i></button>
         </form>
-        <ul class="list space-y-2">
-            <li class=" flex bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md">
-                <span class="text-sm">Lorem ipsum dolor sit amet tis is a real todo task to make it</span>
-                <div class="flex items-center gap-2">
-                    <button
-                        class="bg-blue-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-blue-700 "><i
-                            class="fa-solid fa-pencil"></i></button>
-                    <button
-                        class="bg-red-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-red-700 "><i
-                            class="fa-solid fa-trash"></i></button>
-                </div>
-            </li>
-            <li class=" flex bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md">
-                <span class="text-sm">Lorem ipsum dolor sit amet tis is a real todo task to make it</span>
-                <div class="flex items-center gap-2">
-                    <button
-                        class="bg-blue-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-blue-700 "><i
-                            class="fa-solid fa-pencil"></i></button>
-                    <button
-                        class="bg-red-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-red-700 "><i
-                            class="fa-solid fa-trash"></i></button>
-                </div>
-            </li>
-            <li class=" flex bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md">
-                <span class="text-sm">Lorem ipsum dolor sit amet tis is a real todo task to make it</span>
-                <div class="flex items-center gap-2">
-                    <button
-                        class="bg-blue-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-blue-700 "><i
-                            class="fa-solid fa-pencil"></i></button>
-                    <button
-                        class="bg-red-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-red-700 "><i
-                            class="fa-solid fa-trash"></i></button>
-                </div>
-            </li>
+        <ul class="list space-y-2" id="tasksList">
 
         </ul>
     </div>
+
+
+
+    <script>
+
+
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        let tasksListElement = document.getElementById('tasksList')
+        let inputElement = document.getElementById('userInput');
+        let formElement = document.getElementById('taskForm');
+
+        function renderTasksIntoList() {
+            tasksListElement.innerHTML = ''
+            tasks.forEach((item, index) => {
+                let createLi = document.createElement('li')
+                createLi.innerHTML = `
+                    <div class="flex items-center bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-md" >
+                                <span class="text-sm flex-1"> ${item} </span>
+                                <div class="flex items-center gap-2">
+                                    <button
+                                    onclick="editTask(${index})"
+                                        class="bg-blue-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-blue-700 "><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button
+                                    onclick='deleteTask(${index})'
+                                        class="bg-red-500 text-sm text-white px-2 py-1 rounded-sm cursor-pointer hover:bg-red-700 "><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div >
+
+                    `
+                tasksListElement.append(createLi)
+            })
+        }
+
+        formElement.onsubmit = function (e) {
+            e.preventDefault();
+            let userEnteredValue = inputElement.value.trim();
+            console.log(userEnteredValue)
+            console.log("Form is submitting...")
+            if (userEnteredValue) {
+                tasks.push(userEnteredValue)
+                inputElement.value = '';
+                localStorage.setItem('tasks', JSON.stringify(tasks))
+                renderTasksIntoList();
+            }
+        }
+
+        function deleteTask(indexOfItemToDelete) {
+            tasks.splice(indexOfItemToDelete, 1)
+            localStorage.setItem('tasks', JSON.stringify(tasks))
+            renderTasksIntoList();
+        }
+
+        function editTask(index) {
+            let newValue = prompt('Enter New Value', tasks[index])
+            console.log(newValue)
+            tasks[index] = newValue;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasksIntoList();
+            console.log("editing", index)
+        }
+
+        renderTasksIntoList();
+    </script>
 
 
 </body>
